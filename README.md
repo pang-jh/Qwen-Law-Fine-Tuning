@@ -43,7 +43,7 @@ pip install -e ".[torch,metrics]"
 modelscope download --model Qwen/Qwen2.5-3B-Instruct --local_dir qwen2.5-3b-instruct
 ```
 ## 配置训练yaml文件
-- yaml文件位于examples/train_lora/llama3_lora_sft.yaml
+- yaml文件位于 examples/train_lora/llama3_lora_sft.yaml
 - 配置代码块：llama3_lora_sft.yaml
 ## 执行训练命令
 ```bash
@@ -51,7 +51,7 @@ llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
 ```
 ## 推理
 - 找到saves文件夹中想推理的checkpoint
-- 修改yaml文件，位于examples/inference/llama3_lora_sft.yaml
+- 修改yaml文件，位于 examples/inference/llama3_lora_sft.yaml
 ```bash
 model_name_or_path: qwen2.5-3b-instruct
 adapter_name_or_path: saves/qwen2.5-3b-instruct/lora/1_try/checkpoint-20
@@ -59,4 +59,4 @@ template: qwen
 infer_backend: huggingface  # choices: [huggingface, vllm]
 trust_remote_code: true
 ```
-- 执行推理命令llamafactory-cli webchat examples/inference/llama3_lora_sft.yaml
+- 执行推理命令 llamafactory-cli webchat examples/inference/llama3_lora_sft.yaml
